@@ -1,29 +1,27 @@
 # vue-test-utils-bug
 
-## Project setup
-```
-npm install
-```
+Repo to reproduce issue with watch `handler` called twice. See: `.\tests\unit\example.spec.js`
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your unit tests
+To show the issue run
 ```
 npm run test:unit
 ```
 
-### Lints and fixes files
+after execution console output looks shows:
+
 ```
-npm run lint
+undefined
+setting props
+props are set.
+good
+undefined  
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+while expected:
+
+```
+undefined
+setting props
+props are set.
+good
+```
